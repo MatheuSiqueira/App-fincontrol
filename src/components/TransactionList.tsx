@@ -51,7 +51,7 @@ export function TransactionList({ transactions, onDelete }: Props) {
                   <button
                     onClick={() => onDelete(t.id)}
                     aria-label="Excluir gasto"
-                    className="text-slate-400 hover:text-red-500 transition-colors"
+                    className="flex h-9 w-9 items-center justify-center rounded-full text-slate-400 hover:bg-red-50 hover:text-red-500 dark:hover:bg-red-500/10 transition-colors"
                   >
                     ✕
                   </button>

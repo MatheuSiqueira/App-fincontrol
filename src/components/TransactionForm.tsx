@@ -44,7 +44,7 @@ export function TransactionForm({ onAdd }: Props) {
           placeholder="Descrição (ex: Supermercado)"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
-          className="rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-3 py-2 text-sm text-slate-900 dark:text-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-3 py-3 text-base text-slate-900 dark:text-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
         <input
           type="number"
@@ -54,12 +54,12 @@ export function TransactionForm({ onAdd }: Props) {
           placeholder="Valor (R$)"
           value={amount}
           onChange={(e) => setAmount(e.target.value)}
-          className="rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-3 py-2 text-sm text-slate-900 dark:text-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-3 py-3 text-base text-slate-900 dark:text-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
         <select
           value={group}
           onChange={(e) => setGroup(e.target.value as BudgetGroup)}
-          className="rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-3 py-2 text-sm text-slate-900 dark:text-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-3 py-3 text-base text-slate-900 dark:text-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
           {GROUP_ORDER.map((g) => (
             <option key={g} value={g}>
@@ -71,12 +71,12 @@ export function TransactionForm({ onAdd }: Props) {
           type="date"
           value={date}
           onChange={(e) => setDate(e.target.value)}
-          className="rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-3 py-2 text-sm text-slate-900 dark:text-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-3 py-3 text-base text-slate-900 dark:text-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
       </div>
       <button
         type="submit"
-        className="w-full rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
+        className="w-full rounded-lg bg-blue-600 px-4 py-3 text-base font-medium text-white hover:bg-blue-700"
       >
         Adicionar gasto
       </button>

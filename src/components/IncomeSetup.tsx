@@ -30,7 +30,7 @@ export function IncomeSetup({ income, onChange }: Props) {
             setDraft(String(income));
             setEditing(true);
           }}
-          className="text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline"
+          className="rounded-lg px-3 py-2 text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline"
         >
           Editar
         </button>
@@ -54,11 +54,11 @@ export function IncomeSetup({ income, onChange }: Props) {
           onChange={(e) => setDraft(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && save()}
           placeholder="Ex: 5000"
-          className="w-full rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-3 py-2 text-slate-900 dark:text-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-3 py-3 text-base text-slate-900 dark:text-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
         <button
           onClick={save}
-          className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
+          className="rounded-lg bg-blue-600 px-4 py-3 text-base font-medium text-white hover:bg-blue-700"
         >
           Salvar
         </button>
