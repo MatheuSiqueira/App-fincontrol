@@ -3,6 +3,8 @@ import { GROUP_INFO, type Transaction } from "../types";
 interface Props {
   transactions: Transaction[];
   onDelete: (id: string) => void;
+  title?: string;
+  emptyMessage?: string;
 }
 
 function formatBRL(value: number) {
@@ -14,16 +16,21 @@ function formatDate(iso: string) {
   return `${d}/${m}/${y}`;
 }
 
-export function TransactionList({ transactions, onDelete }: Props) {
+export function TransactionList({
+  transactions,
+  onDelete,
+  title = "Gastos do mês",
+  emptyMessage = "Nenhum gasto registrado ainda.",
+}: Props) {
   const sorted = [...transactions].sort((a, b) => b.date.localeCompare(a.date));
 
   return (
     <div className="rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-4 shadow-sm">
       <h3 className="mb-3 font-semibold text-slate-900 dark:text-slate-50">
-        Gastos do mês ({transactions.length})
+        {title} ({transactions.length})
       </h3>
       {sorted.length === 0 ? (
-        <p className="text-sm text-slate-500 dark:text-slate-400">Nenhum gasto registrado ainda.</p>
+        <p className="text-sm text-slate-500 dark:text-slate-400">{emptyMessage}</p>
       ) : (
         <ul className="divide-y divide-slate-100 dark:divide-slate-700 max-h-96 overflow-y-auto">
           {sorted.map((t) => {
